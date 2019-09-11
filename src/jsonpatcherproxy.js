@@ -437,4 +437,7 @@ const JSONPatcherProxy = (function() {
   return JSONPatcherProxy;
 })();
 
-export { JSONPatcherProxy };
+if (typeof module !== 'undefined') {
+  module.exports = JSONPatcherProxy;
+  module.exports.default = JSONPatcherProxy;
+}
